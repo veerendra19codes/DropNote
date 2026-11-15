@@ -206,7 +206,7 @@ function App() {
     setStatus("");
     try {
       const current = await getCurrentShare();
-      if (!current?.text) return;
+      if (!current || current.type !== "text") return;
       await navigator.clipboard.writeText(current.text);
       setStatus("Copied to clipboard");
     } catch {
