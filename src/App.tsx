@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { Analytics } from "@vercel/analytics/react";
 
 type Share =
   | {
@@ -456,6 +457,7 @@ function App() {
         )}
       </main>
       <footer className="site-footer"><span>dropnote © 2025</span><span>Made for the things you don’t need to keep.</span></footer>
+      <Analytics />
     </div>
   );
 }
